@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <h3> image is </h3>
+    <form method = "post" action="/" enctype = "multipart/form-data">
+        {% csrf_token%}
+        {% comment %} {{form.as_p}}
+         {% endcomment %}
+         <p>
+         {{form.profile_photo}}
+            
+         <button type = "submit", name = "resume uploaded" ,value = "submit" class = "btn btn-success">Image Upload</button>
+         <br>
+         <br>
+         {{form.resume}}
+        
+         <button type = "submit", name = "resume uploaded", value = "submit" class = "btn btn-success">Resume Upload</button>
+         </p>
+        {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        {{message}}
+    {% endfor %}
+</ul>
+{% endif %}
+
+        {% comment %} <button type = "submit", value = "submit" class = "btn btn-success">Image Upload</button> {% endcomment %}
+        
+        
+
+        
+    </form>
+    <a href="show" > Show</a>
+
+</body>
+</html>

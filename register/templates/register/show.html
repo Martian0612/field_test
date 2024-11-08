@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show image</title>
+</head>
+<body>
+    <p>this si the iamge you uploaded</p>
+    {% comment %} {% if register.profile_photo %}
+    <img src="{{register.profile_photo.url}}" > {% endcomment %}
+    {{custom_user}}
+    
+    {% comment %} {% endif %} {% endcomment %}
+</body>
+</html>
